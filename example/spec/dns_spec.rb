@@ -10,11 +10,11 @@ describe 'github.com' do
   it { should have_dns.with_type('A').and_address('204.232.175.90') }
   it { should have_dns.with_type('A').and_address('207.97.227.239') }
 
-  it { should have_dns.with_type('MX').and_exchange('ASPMX.L.GOOGLE.com'	  ).and_preference(10) }
+  it { should have_dns.with_type('MX').and_exchange('ASPMX.L.GOOGLE.com'      ).and_preference(10) }
   it { should have_dns.with_type('MX').and_exchange('ALT1.ASPMX.L.GOOGLE.com' ).and_preference(20) }
   it { should have_dns.with_type('MX').and_exchange('ALT2.ASPMX.L.GOOGLE.com' ).and_preference(20) }
-  it { should have_dns.with_type('MX').and_exchange('ASPMX2.GOOGLEMAIL.com'	  ).and_preference(30) }
-  it { should have_dns.with_type('MX').and_exchange('ASPMX3.GOOGLEMAIL.com'	  ).and_preference(30) }
+  it { should have_dns.with_type('MX').and_exchange('ASPMX2.GOOGLEMAIL.com'   ).and_preference(30) }
+  it { should have_dns.with_type('MX').and_exchange('ASPMX3.GOOGLEMAIL.com'   ).and_preference(30) }
 
   it { should have_dns.with_type('NS').and_name('ns1.p16.dynect.net') }
   it { should have_dns.with_type('NS').and_name('ns2.p16.dynect.net') }
