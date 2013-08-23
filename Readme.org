@@ -1,0 +1,45 @@
+* DNS test
+
+** Purpose
+  - To test DNS automatically
+
+** How-to Run
+- git clone
+  - git clone -b example https://github.com/otahi/rspec-dns.git
+
+- move into example directory and run
+  - =% cd example=
+  - =% rvm use 1.9.3=
+  - =% bundle install --path=vendor/bundle --binstubs=vendor/=
+  - =% bundle exec rspec -c -f doc=
+** What you will get
+
+#+BEGIN_QUOTE
+% bundle exec rspec -c -f doc 
+
+github.com
+  should have the correct dns entries with {:type=>"A", :address=>"192.30.252.128"}
+  should have the correct dns entries with {:type=>"A", :address=>"192.30.252.129"}
+  should have the correct dns entries with {:type=>"A", :address=>"192.30.252.130"}
+  should have the correct dns entries with {:type=>"A", :address=>"192.30.252.131"}
+  should have the correct dns entries with {:type=>"A", :address=>"204.232.175.90"}
+  should have the correct dns entries with {:type=>"A", :address=>"207.97.227.239"}
+  should have the correct dns entries with {:type=>"MX", :exchange=>"ASPMX.L.GOOGLE.com", :preference=>10}
+  should have the correct dns entries with {:type=>"MX", :exchange=>"ALT1.ASPMX.L.GOOGLE.com", :preference=>20}
+  should have the correct dns entries with {:type=>"MX", :exchange=>"ALT2.ASPMX.L.GOOGLE.com", :preference=>20}
+  should have the correct dns entries with {:type=>"MX", :exchange=>"ASPMX2.GOOGLEMAIL.com", :preference=>30}
+  should have the correct dns entries with {:type=>"MX", :exchange=>"ASPMX3.GOOGLEMAIL.com", :preference=>30}
+  should have the correct dns entries with {:type=>"NS", :name=>"ns1.p16.dynect.net"}
+  should have the correct dns entries with {:type=>"NS", :name=>"ns2.p16.dynect.net"}
+  should have the correct dns entries with {:type=>"NS", :name=>"ns3.p16.dynect.net"}
+  should have the correct dns entries with {:type=>"NS", :name=>"ns4.p16.dynect.net"}
+  should have the correct dns entries with {:type=>"TXT", :data=>"v=spf1 include:_spf.google.com include:_netblocks.zdsys.com include:sendgrid.net include:mailgun.org include:smtp.github.com ~all"}
+  should have the correct dns entries with {:type=>"SOA", :mname=>"ns1.p16.dynect.net", :rname=>"hostmaster.github.com", :refresh=>3600, :retry=>600, :expire=>604800, :minimum=>60}
+
+Finished in 2.4 seconds
+17 examples, 0 failures
+% 
+#+END_QUOTE
+
+** Reference
+- [[https://github.com/customink/rspec-dns][rspec-dns]]

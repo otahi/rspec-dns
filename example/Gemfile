@@ -1,0 +1,4 @@
+source "https://rubygems.org"
+
+gem 'rspec'
+gem "rspec-dns", "~> 0.0.2"
