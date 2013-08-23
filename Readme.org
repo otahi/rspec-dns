@@ -8,7 +8,7 @@
   - git clone -b example https://github.com/otahi/rspec-dns.git
 
 - move into example directory and run
-  - =% cd example=
+  - =% cd rspec-dns/example=
   - =% rvm use 1.9.3=
   - =% bundle install --path=vendor/bundle --binstubs=vendor/=
   - =% bundle exec rspec -c -f doc=
