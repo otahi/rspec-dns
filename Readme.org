@@ -14,7 +14,7 @@
   - =% bundle exec rspec -c -f doc=
 ** What you will get
 
-#+BEGIN_QUOTE
+#+BEGIN_EXAMPLE
 % bundle exec rspec -c -f doc 
 
 github.com
@@ -39,7 +39,7 @@ github.com
 Finished in 2.4 seconds
 17 examples, 0 failures
 % 
-#+END_QUOTE
+#+END_EXAMPLE
 
 ** Reference
 - [[https://github.com/customink/rspec-dns][rspec-dns]]
