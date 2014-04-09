@@ -9,8 +9,7 @@
 
 - move into example directory and run
   - =% cd rspec-dns/example=
-  - =% rvm use 1.9.3=
-  - =% bundle install --path=vendor/bundle --binstubs=vendor/=
+  - =% bundle install --path=vendor/bundle
   - =% bundle exec rspec -c -f doc=
 ** What you will get
 
