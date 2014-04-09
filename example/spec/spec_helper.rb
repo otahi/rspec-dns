@@ -5,6 +5,8 @@ require 'yaml'
 
 def update_config(conf)
   _config_file = File.join('config', 'dns.yml')
-  File.write(_config_file, conf.to_yaml)
+  File.open(_config_file,'w') do |file|
+    file.write(conf.to_yaml)
+  end
 end
 

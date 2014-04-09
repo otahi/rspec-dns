@@ -21,11 +21,11 @@ describe 'github.com' do
   it { should have_dns.with_type('NS').and_name('ns3.p16.dynect.net') }
   it { should have_dns.with_type('NS').and_name('ns4.p16.dynect.net') }
 
-  it { should have_dns.with_type('TXT')\
-      .and_data('v=spf1 include:_spf.google.com include:_netblocks.zdsys.com include:sendgrid.net include:mailgun.org include:smtp.github.com ~all') }
+  it do
+    should have_dns.with_type('TXT').and_data('v=spf1 include:_spf.google.com include:_netblocks.zdsys.com include:sendgrid.net include:mailgun.org include:smtp.github.com ~all')
+  end
 
-  it { should have_dns.with_type('SOA').and_mname('ns1.p16.dynect.net') \
-      .and_rname('hostmaster.github.com')\
-#     .and_serial('1376705002')\
-      .and_refresh(3600).and_retry(600).and_expire(604800).and_minimum(60) }
+  it do
+    should have_dns.with_type('SOA').and_mname('ns1.p16.dynect.net').and_rname('hostmaster.github.com').and_refresh(3600).and_retry(600).and_expire(604800).and_minimum(60)
+  end
 end
